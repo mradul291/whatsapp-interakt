@@ -58,17 +58,20 @@ def create_user_from_lead(lead_name):
         json_data = json.dumps(data)
         # return json_data
         response = requests.post(url, headers=headers, data=json_data) 
-        print("response", response)
+        print("response", response.json())
         if "20" in str(response.status_code):
             result = response.json()
             # print(result)
             # frappe.msgprint(result['message'])
             return {"whatsapp":str(code) + mobile_no, "username": lead.first_name}
-        else: 
-            return response
+        else:
+            result = response.json()
+            # print(result)
+            frappe.msgprint(result['message'])
+            return result
     except Exception as e:
         # frappe.throw(e)
-        print("error", e)
+        # print("error", e)
         return {"whatsapp":str(code) + mobile_no, "username": lead.first_name}
 
 
@@ -76,7 +79,7 @@ def create_user_from_lead(lead_name):
 
 def send_message(number, template, username, link=None, filename=None):
     url = 'https://api.interakt.ai/v1/public/message/'
-    auth_encoded = "TmU1aV9IYTF2ZmwwSWRKSmkwX1ZVTGYzRlNwanRqNHNnRlpzT3FrWGlTSTo="
+    auth_encoded = frappe.get_doc("Whatsapp Settings").secret_key
     headers = {
         'Authorization': f'Basic {auth_encoded}',
         'Content-Type': 'application/json'
@@ -106,7 +109,7 @@ def send_message(number, template, username, link=None, filename=None):
     }
     json_data = json.dumps(data)
     response = requests.post(url, headers=headers, data=json_data)
-    print("res",response)
+    # print("res",response)
     if "20" in str(response.status_code):
         result = response.json()
         # frappe.msgprint(result['message'])
@@ -118,7 +121,7 @@ def send_message(number, template, username, link=None, filename=None):
 def send_whatsapp_msg(**args):
     template = args["template"]
     lead_name = args["lead"]
-    print(lead_name)
+    # print(lead_name)
     data = None
     try:
         data = args["link"]
@@ -134,12 +137,12 @@ def send_whatsapp_msg(**args):
             link=None
 
     response = create_user_from_lead(lead_name)
-    print(response)
+    # print(response)
     if response:
         try:
             mobile_no = response['whatsapp']
             first_name = response['username']
-            print("mobile", mobile_no)
+            # print("mobile", mobile_no)
             if mobile_no:
                 # print("hello", mobile_no)
                 response = send_whatsapp_message(template, first_name, mobile_no, filename, link)

@@ -68,7 +68,7 @@ def send_message(**args):
 	else:
 		mobile_no = contact_info.mobile_no
 	data = send_whatsapp_message(template_name, contact_name, mobile_no, file_name, link)
-	print("hello world", contact_name, template_name)
+	# print("hello world", contact_name, template_name)
 	return data
 
 

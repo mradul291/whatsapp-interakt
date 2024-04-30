@@ -11,7 +11,7 @@ class WhatsappContact(Document):
         email = self.email_id
         mobile_no = self.mobile_no
         code = self.country_code
-        dob = self.dob
+        # dob = self.dob
         response = create_user_from_lead(name,email,mobile_no,code)
         if response:
             frappe.msgprint("Created Successfully")

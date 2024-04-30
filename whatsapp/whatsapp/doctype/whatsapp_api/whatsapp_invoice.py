@@ -1,10 +1,10 @@
 import frappe, json, requests
-from frappe.utils.file_manager import save_file
-from frappe.utils.print_format import download_pdf
 
 def send_message(mobile_number, template, customer_name, invoice_url, invoice_name):
     url = 'https://api.interakt.ai/v1/public/message/'
-    auth_encoded = "TmU1aV9IYTF2ZmwwSWRKSmkwX1ZVTGYzRlNwanRqNHNnRlpzT3FrWGlTSTo="
+    auth_encoded = frappe.get_doc("Whatsapp Settings").secret_key
+    if not(auth_encoded):
+        frappe.throw("Update your credentials in whatsapp setting")
     headers = {
         'Authorization': f'Basic {auth_encoded}',
         'Content-Type': 'application/json'
