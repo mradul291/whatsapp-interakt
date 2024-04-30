@@ -68,12 +68,12 @@ app_license = "mit"
 # ------------
 
 # before_install = "whatsapp.install.before_install"
-# after_install = "whatsapp.install.after_install"
+after_install = "whatsapp.install.after_install"
 
 # Uninstallation
 # ------------
 
-# before_uninstall = "whatsapp.uninstall.before_uninstall"
+before_uninstall = "whatsapp.uninstall.before_uninstall"
 # after_uninstall = "whatsapp.uninstall.after_uninstall"
 
 # Integration Setup

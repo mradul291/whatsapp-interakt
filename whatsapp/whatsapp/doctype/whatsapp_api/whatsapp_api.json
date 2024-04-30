@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{contact}-{####}",
+ "creation": "2024-04-23 16:52:59.159837",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "template",
+  "contact",
+  "link_name",
+  "file_name",
+  "column_break_xyia",
+  "header_values",
+  "send_message"
+ ],
+ "fields": [
+  {
+   "fieldname": "template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Template",
+   "options": "Whatsapp Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Whatsapp Contact",
+   "reqd": 1
+  },
+  {
+   "fieldname": "send_message",
+   "fieldtype": "Button",
+   "label": "Send Message"
+  },
+  {
+   "fieldname": "column_break_xyia",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "template.media_link",
+   "fetch_if_empty": 1,
+   "fieldname": "header_values",
+   "fieldtype": "Small Text",
+   "label": "Header Values"
+  },
+  {
+   "fieldname": "link_name",
+   "fieldtype": "Data",
+   "label": "Form Link"
+  },
+  {
+   "fieldname": "file_name",
+   "fieldtype": "Data",
+   "label": "File Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-04-24 19:34:10.544575",
+ "modified_by": "Administrator",
+ "module": "Whatsapp",
+ "name": "Whatsapp API",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "queue_in_background": 1,
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
