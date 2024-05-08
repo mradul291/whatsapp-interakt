@@ -33,7 +33,7 @@ def create_script():
                             "/api/method/frappe.utils.print_format.download_pdf?doctype=Sales%20Invoice&name=" +
                             invoice;
                         frappe.call({
-                            method: "whatsapp.whatsapp.doctype.whatsapp_api.whatsapp_invoice.send_invoice",
+                            method: "whatsapp_interakt.whatsapp_interakt.doctype.whatsapp_api.whatsapp_invoice.send_invoice",
                             args: {
                                 url: invoiceUrl,
                                 invoice_name: invoice,
@@ -73,7 +73,7 @@ frappe.listview_settings["Lead"] = {
 			leads = listview.get_checked_items();
 			console.log(leads);
 			frappe.call({
-				method: "whatsapp.whatsapp.doctype.whatsapp_template.whatsapp_template.get_all_templates",
+				method: "whatsapp_interakt.whatsapp_interakt.doctype.whatsapp_template.whatsapp_template.get_all_templates",
 				callback: function (response) {
 					let data = response.message;
 					let options = data.map((obj) => ({ label: obj.name, value: obj.name }));
@@ -112,7 +112,7 @@ frappe.listview_settings["Lead"] = {
 						d.hide();
 						leads.map((lead) => {
 							frappe.call({
-								method: "whatsapp.whatsapp.doctype.whatsapp_api.whatsapp_lead.send_whatsapp_msg",
+								method: "whatsapp_interakt.whatsapp_interakt.doctype.whatsapp_api.whatsapp_lead.send_whatsapp_msg",
 								args: {
 									template: values.template,
 									lead: lead.name,
@@ -164,7 +164,7 @@ frappe.ui.form.on("Lead", {
 	refresh: function (listview) {
 		listview.page.add_menu_item(__("Send whatsapp message"), () => {
 			frappe.call({
-				method: "whatsapp.whatsapp.doctype.whatsapp_template.whatsapp_template.get_all_templates",
+				method: "whatsapp_interakt.whatsapp_interakt.doctype.whatsapp_template.whatsapp_template.get_all_templates",
 				callback: function (response) {
 					let data = response.message;
 					let options = data.map((obj) => ({ label: obj.name, value: obj.name }));
@@ -202,7 +202,7 @@ frappe.ui.form.on("Lead", {
 						console.log("hey", values.template, values.linkFilename);
 
 						frappe.call({
-							method: "whatsapp.whatsapp.doctype.whatsapp_api.whatsapp_lead.send_whatsapp_msg",
+							method: "whatsapp_interakt.whatsapp_interakt.doctype.whatsapp_api.whatsapp_lead.send_whatsapp_msg",
 							args: {
 								template: values.template,
 								lead: lead,

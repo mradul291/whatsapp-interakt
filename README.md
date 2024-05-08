@@ -1,52 +1,33 @@
-# ERPNext WhatsApp Messaging App
+### Whatsapp Interakt
 
-## Overview
+App to interact with whatsapp
 
-This ERPNext custom app integrates with the Interakt API to enable sending WhatsApp messages directly from ERPNext. With this app, users can send automated or manual WhatsApp messages to customers, suppliers, or other contacts stored in the ERPNext database.
+### Installation
 
-## Features
+You can install this app using the [bench](https://github.com/frappe/bench) CLI:
 
-- Send WhatsApp templates to individual contacts or leads.
-- Integrate with existing ERPNext modules for seamless workflow integration.
+```bash
+cd $PATH_TO_YOUR_BENCH
+bench get-app $URL_OF_THIS_REPO --branch develop
+bench install-app whatsapp_interakt
+```
 
-## Installation
+### Contributing
 
-1. Clone or download the repository to your ERPNext instance.
-	url
+This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
 
-2. Install the app using the following command:
-	bench --site [site-name] install-app whatsapp
+```bash
+cd apps/whatsapp_interakt
+pre-commit install
+```
 
+Pre-commit is configured to use the following tools for checking and formatting your code:
 
-3. Configure the Interakt API credentials in the whatsapp settings.
+- ruff
+- eslint
+- prettier
+- pyupgrade
 
-4. Start sending WhatsApp messages directly from ERPNext!
+### License
 
-## Usage
-
-1. Navigate to the WhatsApp API doctype in ERPNext.
-
-2. Select the lead or sales Invoice you want to send a template to.
-
-3. Compose your message using the provided template editor.
-
-4. Click "Send" to deliver the message instantly or schedule it for a later time.
-
-
-## Documentation
-
-For detailed instructions on how to use the app and integrate with the Interakt API, refer to the [documentation](docs/README.md).
-
-## Support
-
-If you encounter any issues or have questions about the app, please contact our support team at [support@example.com](mailto:support@example.com).
-
-## Contributing
-
-We welcome contributions from the community! If you would like to contribute to the development of this app, please fork the repository and submit a pull request with your proposed changes.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
+mit

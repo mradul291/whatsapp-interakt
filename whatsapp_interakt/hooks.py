@@ -1,8 +1,8 @@
-app_name = "whatsapp"
-app_title = "Whatsapp"
-app_publisher = "Techsolvo LLP"
-app_description = "App to interakt with whatsapp"
-app_email = "mayank.raghuvanshi@techsolvo.com"
+app_name = "whatsapp_interakt"
+app_title = "Whatsapp Interakt"
+app_publisher = "Mradul Mishra"
+app_description = "App to interact with whatsapp"
+app_email = "mishramradul29@gmail.com"
 app_license = "mit"
 # required_apps = []
 
@@ -10,15 +10,15 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/whatsapp/css/whatsapp.css"
-# app_include_js = "/assets/whatsapp/js/whatsapp.js"
+# app_include_css = "/assets/whatsapp_interakt/css/whatsapp_interakt.css"
+# app_include_js = "/assets/whatsapp_interakt/js/whatsapp_interakt.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/whatsapp/css/whatsapp.css"
-# web_include_js = "/assets/whatsapp/js/whatsapp.js"
+# web_include_css = "/assets/whatsapp_interakt/css/whatsapp_interakt.css"
+# web_include_js = "/assets/whatsapp_interakt/js/whatsapp_interakt.js"
 
 # include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "whatsapp/public/scss/website"
+# website_theme_scss = "whatsapp_interakt/public/scss/website"
 
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
@@ -36,7 +36,7 @@ app_license = "mit"
 # Svg Icons
 # ------------------
 # include app icons in desk
-# app_include_icons = "whatsapp/public/icons.svg"
+# app_include_icons = "whatsapp_interakt/public/icons.svg"
 
 # Home Pages
 # ----------
@@ -60,43 +60,43 @@ app_license = "mit"
 
 # add methods and filters to jinja environment
 # jinja = {
-# 	"methods": "whatsapp.utils.jinja_methods",
-# 	"filters": "whatsapp.utils.jinja_filters"
+# 	"methods": "whatsapp_interakt.utils.jinja_methods",
+# 	"filters": "whatsapp_interakt.utils.jinja_filters"
 # }
 
 # Installation
 # ------------
 
-# before_install = "whatsapp.install.before_install"
-after_install = "whatsapp.install.after_install"
+# before_install = "whatsapp_interakt.install.before_install"
+after_install = "whatsapp_interakt.install.after_install"
 
 # Uninstallation
 # ------------
 
-before_uninstall = "whatsapp.uninstall.before_uninstall"
-# after_uninstall = "whatsapp.uninstall.after_uninstall"
+before_uninstall = "whatsapp_interakt.uninstall.before_uninstall"
+# after_uninstall = "whatsapp_interakt.uninstall.after_uninstall"
 
 # Integration Setup
 # ------------------
 # To set up dependencies/integrations with other apps
 # Name of the app being installed is passed as an argument
 
-# before_app_install = "whatsapp.utils.before_app_install"
-# after_app_install = "whatsapp.utils.after_app_install"
+# before_app_install = "whatsapp_interakt.utils.before_app_install"
+# after_app_install = "whatsapp_interakt.utils.after_app_install"
 
 # Integration Cleanup
 # -------------------
 # To clean up dependencies/integrations with other apps
 # Name of the app being uninstalled is passed as an argument
 
-# before_app_uninstall = "whatsapp.utils.before_app_uninstall"
-# after_app_uninstall = "whatsapp.utils.after_app_uninstall"
+# before_app_uninstall = "whatsapp_interakt.utils.before_app_uninstall"
+# after_app_uninstall = "whatsapp_interakt.utils.after_app_uninstall"
 
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "whatsapp.notifications.get_notification_config"
+# notification_config = "whatsapp_interakt.notifications.get_notification_config"
 
 # Permissions
 # -----------
@@ -135,39 +135,39 @@ before_uninstall = "whatsapp.uninstall.before_uninstall"
 
 # scheduler_events = {
 # 	"all": [
-# 		"whatsapp.tasks.all"
+# 		"whatsapp_interakt.tasks.all"
 # 	],
 # 	"daily": [
-# 		"whatsapp.tasks.daily"
+# 		"whatsapp_interakt.tasks.daily"
 # 	],
 # 	"hourly": [
-# 		"whatsapp.tasks.hourly"
+# 		"whatsapp_interakt.tasks.hourly"
 # 	],
 # 	"weekly": [
-# 		"whatsapp.tasks.weekly"
+# 		"whatsapp_interakt.tasks.weekly"
 # 	],
 # 	"monthly": [
-# 		"whatsapp.tasks.monthly"
+# 		"whatsapp_interakt.tasks.monthly"
 # 	],
 # }
 
 # Testing
 # -------
 
-# before_tests = "whatsapp.install.before_tests"
+# before_tests = "whatsapp_interakt.install.before_tests"
 
 # Overriding Methods
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "whatsapp.event.get_events"
+# 	"frappe.desk.doctype.event.event.get_events": "whatsapp_interakt.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-# 	"Task": "whatsapp.task.get_dashboard_data"
+# 	"Task": "whatsapp_interakt.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -181,13 +181,13 @@ before_uninstall = "whatsapp.uninstall.before_uninstall"
 
 # Request Events
 # ----------------
-# before_request = ["whatsapp.utils.before_request"]
-# after_request = ["whatsapp.utils.after_request"]
+# before_request = ["whatsapp_interakt.utils.before_request"]
+# after_request = ["whatsapp_interakt.utils.after_request"]
 
 # Job Events
 # ----------
-# before_job = ["whatsapp.utils.before_job"]
-# after_job = ["whatsapp.utils.after_job"]
+# before_job = ["whatsapp_interakt.utils.before_job"]
+# after_job = ["whatsapp_interakt.utils.after_job"]
 
 # User Data Protection
 # --------------------
@@ -217,7 +217,7 @@ before_uninstall = "whatsapp.uninstall.before_uninstall"
 # --------------------------------
 
 # auth_hooks = [
-# 	"whatsapp.auth.validate"
+# 	"whatsapp_interakt.auth.validate"
 # ]
 
 # Automatically update python controller files with type annotations for this app.
