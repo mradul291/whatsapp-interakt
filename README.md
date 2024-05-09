@@ -1,6 +1,13 @@
 ### Whatsapp Interakt
 
-App to interact with whatsapp, with the help of this app you can send whatsapp templates to the leads and the sales Invoice also
+## Overview
+
+This ERPNext custom app integrates with the Interakt API to enable sending WhatsApp messages directly from ERPNext. With this app, users can send template messages to leads and send invoice to customers.
+
+## Features
+
+- Send WhatsApp templates to individual contacts or leads.
+- Integrate with existing ERPNext modules for seamless workflow integration.
 
 ### Installation
 
