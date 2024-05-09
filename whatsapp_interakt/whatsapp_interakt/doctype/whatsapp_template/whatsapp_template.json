@@ -1,70 +1,70 @@
 {
- "actions": [],
- "autoname": "field:template_name",
- "creation": "2024-04-23 16:24:29.171619",
- "doctype": "DocType",
- "engine": "InnoDB",
- "field_order": [
-  "template_name",
-  "media_type",
-  "body_variables",
-  "column_break_gpbo",
-  "media_link"
- ],
- "fields": [
-  {
-   "fieldname": "template_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Template Name",
-   "reqd": 1,
-   "unique": 1
-  },
-  {
-   "fieldname": "media_type",
-   "fieldtype": "Select",
-   "label": "Media Type",
-   "options": "None\nText\nImage\nVideo\nDocument"
-  },
-  {
-   "fieldname": "column_break_gpbo",
-   "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "body_variables",
-   "fieldtype": "Int",
-   "label": "Number of Body Variables"
-  },
-  {
-   "fieldname": "media_link",
-   "fieldtype": "Small Text",
-   "label": "Media Link"
-  }
- ],
- "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2024-04-23 17:29:57.804506",
- "modified_by": "Administrator",
- "module": "Whatsapp",
- "name": "Whatsapp Template",
- "naming_rule": "By fieldname",
- "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "System Manager",
-   "share": 1,
-   "write": 1
-  }
- ],
- "quick_entry": 1,
- "sort_field": "modified",
- "sort_order": "DESC",
- "states": []
+  "actions": [],
+  "autoname": "field:template_name",
+  "creation": "2024-04-23 16:24:29.171619",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "template_name",
+    "media_type",
+    "body_variables",
+    "column_break_gpbo",
+    "media_link"
+  ],
+  "fields": [
+    {
+      "fieldname": "template_name",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Template Name",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "media_type",
+      "fieldtype": "Select",
+      "label": "Media Type",
+      "options": "None\nText\nImage\nVideo\nDocument"
+    },
+    {
+      "fieldname": "column_break_gpbo",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "body_variables",
+      "fieldtype": "Int",
+      "label": "Number of Body Variables"
+    },
+    {
+      "fieldname": "media_link",
+      "fieldtype": "Small Text",
+      "label": "Media Link"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2024-04-23 17:29:57.804506",
+  "modified_by": "Administrator",
+  "module": "Whatsapp Interakt",
+  "name": "Whatsapp Template",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    }
+  ],
+  "quick_entry": 1,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
 }

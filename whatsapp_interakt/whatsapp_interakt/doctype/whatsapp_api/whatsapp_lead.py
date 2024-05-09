@@ -1,6 +1,6 @@
 import frappe, requests, json
 from frappe import get_doc
-from whatsapp.whatsapp.doctype.whatsapp_api.whatsapp_api import send_whatsapp_message
+from whatsapp_interakt.whatsapp_interakt.doctype.whatsapp_api.whatsapp_api import send_whatsapp_message
 
 def create_user_from_lead(lead_name):
     url = 'https://api.interakt.ai/v1/public/track/users/'
